@@ -9,7 +9,7 @@ alias wb="cd ~/Dropbox/programming/projects/"
 alias webdev="cd ~/Dropbox/webdev/projects/"
 alias theme="cd sites/all/themes/"
 
-alias editrc=" vi ~/.bashrc"
+alias editrc="vi ~/.bashrc"
 alias updaterc="source ~/.bashrc;"
 
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
