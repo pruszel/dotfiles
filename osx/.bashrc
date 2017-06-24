@@ -9,7 +9,7 @@ export CLICOLOR=1
 export LSCOLORS=DxFxCxDxBxegedabagaced
 
 # set terminal editors
-export EDITOR='mate -w' # TextMate
+export EDITOR='subl -w' # Sublime Text 2/3
 export GIT_EDITOR=vim
 
 # Set Ruby version

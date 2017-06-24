@@ -6,7 +6,7 @@ alias gits="git status -s"
 alias gitb="git rev-parse --abbrev-ref HEAD"
 
 alias wb="cd ~/Dropbox/programming/projects/"
-alias webdev="cd ~/Dropbox/webdev/projects/"
+alias sites="cd ~/Dropbox/sites/"
 alias theme="cd sites/all/themes/"
 
 alias editrc="vi ~/.bashrc"
