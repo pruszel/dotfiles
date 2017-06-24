@@ -1,0 +1,41 @@
+# ===============================================
+# Little Passports specific
+# start local dev virtual machine
+alias lpvmon="VBoxManage startvm local.lpdev.us --type headless"
+alias lpvmoff="VBoxManage controlvm local.lpdev.us poweroff"
+
+alias lpmage="cd ~/Code/LittlePassports/lpmage"
+
+alias lpdev="gcloud compute --project \"sturdy-yen-112617\" ssh --zone \"us-central1-b\" \"mysql101\""
+
+
+# ===============================================
+# common directories 
+alias lp="cd ~/Code/LittlePassports"
+alias dev="cd ~/dev"
+alias sites="cd ~/sites"
+
+
+# ===============================================
+# shorthand commands
+alias lsa="ls -lAh"
+alias la="ls -lAh"
+alias l="ls -CF"
+
+alias gits="git status -s"
+alias gitb="git rev-parse --abbrev-ref HEAD"
+alias gitf="git fetch --all"
+alias gittrack="git push --set-upstream origin (gitb)"
+alias editaliases="sublime ~/.config/.aliases"
+
+
+# ===============================================
+# run programs/apps
+alias sourcetree="open -a /Applications/SourceTree.app"
+
+alias audiointernal="audiodevice output Internal\ Speakers"
+alias audioappletv="audiodevice output Apple\ TV"
+alias audioheadphones="audiodevice output Headphones"
+
+# run vim with custom settings in non-default location
+alias vi="vi -u ~/.config/.vimrc"
