@@ -39,3 +39,5 @@ alias audioheadphones="audiodevice output Headphones"
 
 # run vim with custom settings in non-default location
 alias vi="vi -u ~/.config/.vimrc"
+
+alias syncdotfiles="cp ~/.config/.aliases ~/dev/dotfiles/osx/; cp ~/.config/fish/config.fish ~/dev/dotfiles/osx/"
