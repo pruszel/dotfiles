@@ -1,37 +1,75 @@
-# ===============================================
+# -----------------------------------------------
 # Little Passports specific
-# start local dev virtual machine
-alias lpvmon="VBoxManage startvm local.lpdev.us --type headless"
-alias lpvmoff="VBoxManage controlvm local.lpdev.us poweroff"
-
-alias lpmage="cd ~/Code/LittlePassports/lpmage"
-
-alias lpdev="gcloud compute --project \"sturdy-yen-112617\" ssh --zone \"us-central1-b\" \"mysql101\""
-
-
-# ===============================================
-# common directories 
+# -----------------------------------------------
 alias lp="cd ~/Code/LittlePassports"
+alias lpvm="sh ~/dev/scripts/bash/startvm.sh local.lpdev.us"
+alias lpmage="cd ~/Code/LittlePassports/lpmage"
+alias lplocal="ssh adminuser@local.lpdev.us"
+alias lptask="ssh www-upload@130.211.223.93"
+
+
+# -----------------------------------------------
+# common directories 
+# -----------------------------------------------
 alias dev="cd ~/dev"
 alias sites="cd ~/sites"
 
 
-# ===============================================
+# -----------------------------------------------
 # shorthand commands
+# -----------------------------------------------
 alias lsa="ls -lAh"
 alias la="ls -lAh"
 alias l="ls -CF"
+alias mv="mv -v"
+alias cat="ccat"
 
+alias git="hub"
+alias gitm="git merge"
 alias gits="git status -s"
-alias gitb="git rev-parse --abbrev-ref HEAD"
+alias gitp="git pull"
+alias gitpp="git push"
+alias gitc="git checkout"
+alias gitl="git lg"
 alias gitf="git fetch --all"
+alias gitb="git rev-parse --abbrev-ref HEAD"
+alias gitconfig="sublime ~/.gitconfig"
 alias gittrack="git push --set-upstream origin (gitb)"
+
+alias dockerstopall="docker stop (docker ps -a -q)"
+alias dockerrmall="docker rm (docker ps -a -q)"
+
 alias editaliases="sublime ~/.config/.aliases"
 
+alias apacherestart="sudo apachectl restart"
+alias apachestart="sudo apachectl start"
+alias apachestop="sudo apachectl stop"
 
-# ===============================================
+alias gcloudpersonal="gcloud config configurations activate personal"
+alias gcloudlp="gcloud config configurations activate littlepassports"
+
+alias configure="sublime ~/.config/fish/config.fish"
+
+# -----------------------------------------------
+# servers 
+# -----------------------------------------------
+alias whatbox="ssh phpete@odyssey.whatbox.ca"
+alias seedbox="ssh phpete@odyssey.whatbox.ca"
+alias weddingsite="doctl compute ssh --ssh-user peterlopez peterandclarisse.wedding"
+#alias weddingsite="ssh -p 21098 petevzpk@peterandclarisse.wedding"
+alias slocomcare="ssh peterlopez@165.227.13.227"
+
+
+# -----------------------------------------------
 # run programs/apps
+# -----------------------------------------------
 alias sourcetree="open -a /Applications/SourceTree.app"
+alias dockerstart="open -a /Applications/Docker.app"
+
+alias upload="gdrive upload --recursive --parent 0B4o-N8uUTql2MFB3ZGYwYVFaWDQ"
+
+alias subliem="sublime"
+alias subl="sublime"
 
 alias audiointernal="audiodevice output Internal\ Speakers"
 alias audioappletv="audiodevice output Apple\ TV"
@@ -40,4 +78,14 @@ alias audioheadphones="audiodevice output Headphones"
 # run vim with custom settings in non-default location
 alias vi="vi -u ~/.config/.vimrc"
 
-alias syncdotfiles="cp ~/.config/.aliases ~/dev/dotfiles/osx/; cp ~/.config/fish/config.fish ~/dev/dotfiles/osx/"
+alias phpxdebug="php -d xdebug.remote_autostart=On"
+
+alias logio="open -a /Applications/Google\ Chrome.app 'https://logio.lpdev.us'"
+
+# run fish shell for root user
+alias root="sudo su --shell /usr/local/bin/fish"
+
+
+# -----------------------------------------------
+# junk
+#alias syncdotfiles="cp ~/.config/.aliases ~/dev/dotfiles/osx/; cp ~/.config/fish/config.fish ~/dev/dotfiles/osx/"
