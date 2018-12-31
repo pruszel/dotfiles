@@ -1,5 +1,6 @@
+#
 # taken from: https://github.com/paulirish/dotfiles/blob/master/.osx
-
+#
 
 # Get admin priveleges upfront
 sudo -v

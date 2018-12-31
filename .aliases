@@ -1,0 +1,80 @@
+# -----------------------------------------------
+# common directories 
+# -----------------------------------------------
+alias dev="cd ~/dev"
+alias sites="cd ~/sites"
+
+
+# -----------------------------------------------
+# shorthand commands
+# -----------------------------------------------
+alias lsa="ls -lAh"
+alias la="ls -lAh"
+alias l="ls -CF"
+alias mv="mv -v"
+alias cat="ccat"
+
+alias editaliases="sublime ~/.config/.aliases"
+
+alias configure="sublime ~/.config/fish/config.fish"
+
+
+# -----------------------------------------------
+# servers 
+# -----------------------------------------------
+
+
+
+# -----------------------------------------------
+# programs/apps
+# -----------------------------------------------
+alias sourcetree="open -a /Applications/SourceTree.app"
+
+# Docker
+alias dockerstart="open -a /Applications/Docker.app"
+alias dockerstopall="docker stop (docker ps -a -q)"
+alias dockerrmall="docker rm (docker ps -a -q)"
+
+alias subliem="sublime"
+alias subl="sublime"
+
+# Git
+# alias git="hub"
+# alias gitm="git merge"
+alias gits="git status -s"
+alias gitp="git pull"
+alias gitpp="git push"
+alias gitc="git checkout"
+alias gitl="git lg"
+alias gitf="git fetch --all"
+alias gitb="git rev-parse --abbrev-ref HEAD"
+alias gitconfig="sublime ~/.gitconfig"
+alias gittrack="git push --set-upstream origin (gitb)"
+
+alias audiointernal="audiodevice output Internal\ Speakers"
+alias audioappletv="audiodevice output Apple\ TV"
+alias audioheadphones="audiodevice output Headphones"
+
+# Apache
+alias apacherestart="sudo apachectl restart"
+alias apachestart="sudo apachectl start"
+alias apachestop="sudo apachectl stop"
+
+# run vim with custom settings in non-default location
+alias vi="vi -u ~/.config/.vimrc"
+
+alias phpxdebug="php -d xdebug.remote_autostart=On"
+
+# run fish shell for root user
+alias root="sudo su --shell /usr/local/bin/fish"
+
+
+# -----------------------------------------------
+# Mac OS
+# -----------------------------------------------
+alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
+
+
+# -----------------------------------------------
+# junk
+#alias syncdotfiles="cp ~/.config/.aliases ~/dev/dotfiles/osx/; cp ~/.config/fish/config.fish ~/dev/dotfiles/osx/"

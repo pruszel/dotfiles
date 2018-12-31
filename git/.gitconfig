@@ -7,7 +7,7 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = Peter Lopez
+	name = Peter Ruszel
 	email = peter@phpete.me
 [commit]
 	template = /Users/peter/.stCommitMsg
