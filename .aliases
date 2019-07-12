@@ -37,6 +37,10 @@ alias gitb="git rev-parse --abbrev-ref HEAD"
 alias gitconfig="sublime ~/.gitconfig"
 alias gittrack="git push --set-upstream origin (gitb)"
 
+# Docker
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+
 # run vim with custom settings in non-default location
 alias vi="vi -u ~/.config/.vimrc"
 
