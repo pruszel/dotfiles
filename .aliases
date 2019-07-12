@@ -18,7 +18,7 @@ alias editaliases="sublime ~/.config/.aliases"
 
 
 # -----------------------------------------------
-# programs/apps
+# run programs/apps
 # -----------------------------------------------
 alias sourcetree="open -a ~/Applications/SourceTree.app"
 

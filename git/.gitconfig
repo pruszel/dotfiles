@@ -1,26 +1,25 @@
 [user]
-  name = Peter Lopez
-  email = peter@peterlopez.me
+	name = Peter Ruszel
+	email = peter@phpete.me
 [core]
-  excludesfile = /Users/peter/.gitignore_global
+	excludesfile = /Users/peter/.gitignore_global
 [difftool "sourcetree"]
-  cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-  trustExitCode = true
+	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
 [commit]
-  template = /Users/peter/.stCommitMsg
+	template = /Users/peter/.stCommitMsg
 [alias]
-  master = checkout master
-  develop = checkout develop
-  staging = checkout staging
-  co = checkout
-  subup = submodule update
-  remotes = remote -v
-  delete = branch -d
-  erase = !git branch -d $1 && git push origin --delete $1
-  new = checkout -b
-  branches = branch -v
-  stashes = stash list
-
+    master = checkout master
+    develop = checkout develop
+    staging = checkout staging
+    co = checkout
+    subup = submodule update
+    remotes = remote -v
+    delete = branch -d
+    erase = !git branch -d $1 && git push origin --delete $1
+    new = checkout -b
+    branches = branch -v
+    stashes = stash list
