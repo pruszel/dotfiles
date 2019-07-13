@@ -13,10 +13,10 @@ alias ls="ls -lAh"
 alias ll="ls -lAh"
 alias mv="mv -v"
 alias cat="ccat"
-alias o.="open ."
+alias o="open ."
 
 #alias config="sublime ~/.config/fish/config.fish"
-alias editaliases="sublime ~/.config/.aliases"
+alias editaliases="sublime ~/.aliases"
 
 
 # -----------------------------------------------
@@ -27,7 +27,7 @@ alias github="osascript -e 'tell application \"Firefox\" to activate' -e 'tell a
 alias gmail="osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"Google Chrome\" to open location \"https://gmail.com/\"'"
 
 alias sourcetree="open -a ~/Applications/SourceTree.app"
-alias st="sourcetree"
+alias st="sourcetree ."
 
 alias ff="osascript -e 'tell application \"Firefox\" to activate'"
 alias subliem="sublime"
@@ -35,7 +35,8 @@ alias subl="sublime"
 
 # Git
 # alias git="hub"
-alias gits="[ -z \"$(gits)\" ] && git status -s;  [ -n \"$(gits)\" ] && gits"
+# todo fix when not in git repo
+#alias gits="[ -z \"$(gits)\" ] && git status -s;  [ -n \"$(gits)\" ] && gits"
 alias gitp="git pull"
 alias gitpp="git push"
 alias gitc="git checkout"
@@ -43,7 +44,7 @@ alias gitl="git lg"
 alias gitf="git fetch --all"
 alias gitb="git rev-parse --abbrev-ref HEAD"
 alias gitconfig="sublime ~/.gitconfig"
-alias gittrack="git push --set-upstream origin (gitb)"
+alias gittrack='git push --set-upstream origin $(gitb)'
 
 # Docker
 alias dcu="docker-compose up -d"
@@ -54,9 +55,6 @@ alias dcd="docker-compose down"
 
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
-
-# run fish shell for root user
-alias root="sudo su --shell /usr/local/bin/fish"
 
 
 # -----------------------------------------------
