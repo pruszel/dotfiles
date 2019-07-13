@@ -12,6 +12,9 @@ DIR='\[$(tput setaf 4)\]\W'
 PROMPT='\[$(tput sgr0)\]>'
 export PS1="${ARROW} ${USER}${DIV}${DIR} ${PROMPT} "
 
+# The contents of this variable are executed as a regular Bash command just before Bash displays a prompt.
+export PROMPT_COMMAND="echo '--'"
+
 # Add timestamp to history
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
@@ -26,7 +29,6 @@ function gits {
   # display git ss (simple status)
   tput sgr0; 
   git ss;
-  [ -z "$(git ss)" ] && echo -n "No changes."
+  [ -z "$(git ss)" ] && echo "No changes."
 }
-
 export -f gits
