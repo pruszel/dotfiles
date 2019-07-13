@@ -1,8 +1,11 @@
 # -----------------------------------------------
 # common directories 
 # -----------------------------------------------
+alias home="cd ~"
+alias hoem="home"
 alias dev="cd ~/dev"
 alias sites="cd ~/sites"
+alias scripts="cd ~/scripts"
 alias dotfiles="cd ~/dev/dotfiles"
 
 
