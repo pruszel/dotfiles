@@ -5,7 +5,12 @@ set -o vi
 shopt -s autocd
 
 # Set prompt
-export PS1="\\[$(tput setaf 2)\]➜  $(tput bold)\]\[$(tput setaf 4)\]\u\[$(tput setaf 7)\]:\[$(tput setaf 4)\]\W \[$(tput sgr0)\]> "
+ARROW='\[$(tput setaf 2)\]➜ '
+USER='\[$(tput bold)$(tput setaf 4)\]\u'
+DIV='\[$(tput setaf 7)\]:'
+DIR='\[$(tput setaf 4)\]\W'
+PROMPT='\[$(tput sgr0)\]>'
+export PS1="${ARROW} ${USER}${DIV}${DIR} ${PROMPT} "
 
 # Add timestamp to history
 export HISTTIMEFORMAT="%d/%m/%y %T "
