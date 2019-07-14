@@ -16,12 +16,12 @@ alias l="ls -BA1Fh"
 alias la="ls -lAh"
 alias ll="ls -lAh"
 alias mv="mv -v"
-alias cat="ccat"
+alias mkdir="mkdir -v"
 alias o="open ."
 
-#alias config="sublime ~/.config/fish/config.fish"
-alias editaliases="sublime ~/.aliases"
-
+alias editaliases="vim ~/.aliases"
+alias editrc="vim ~/.bashrc"
+alias vimrc="vim ~/.vimrc"
 
 # -----------------------------------------------
 # programs/apps
