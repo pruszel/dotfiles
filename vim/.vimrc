@@ -1,26 +1,48 @@
 " Enable useful vim features
 set nocompatible
 
+
+" ---------------------------
+" Key mappings
+"
+let mapleader =","
+" Save
+nnoremap <leader>s :w<CR>
+" Yank from cursor to end of line
+nnoremap Y y$
+" Toggle folds (<Space>)
+noremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
+" Insert mode bindings
+:imap <M-s> <Esc>:w<kEnter>
+
+" ------------------------
+" File types
+"
+" Read JSON as JavaScript
+au BufRead,BufNewFile *.json set ft=json syntax=javascript
+"Configure whitespace settings
+set ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype css setlocal ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab smarttab
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab smarttab
+
+
+" ------------------------
+" Editor config
+"
 " Syntax highlighting
 set t_Co=256
 set background=dark
 syntax on
+
+" Theme
 colorscheme monokai
 
-" Yank from cursor to end of line
-nnoremap Y y$
-
-" Toggle folds (<Space>)
-nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
-
-" Set relative line numbers
 set relativenumber " Use relative line numbers. Current line is still in status bar.
 au BufReadPost,BufNewFile * set relativenumber
-
-" JSON
-au BufRead,BufNewFile *.json set ft=json syntax=javascript
-
-" Editor
 set autoindent " Copy indent from last line when starting new line.
 set backspace=indent,eol,start
 set cursorline " Highlight current line
