@@ -32,3 +32,13 @@ function gits {
   [ -z "$(git ss)" ] && echo "No changes."
 }
 export -f gits
+
+function cat {
+  if [ -x "$(command -v ccat)" ];
+  then
+    ccat "$@"
+  else
+    cat "$@"
+  fi
+}
+export -f cat
