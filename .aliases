@@ -1,6 +1,6 @@
 # -----------------------------------------------
 # common directories 
-# -----------------------------------------------
+# 
 alias home="cd ~"
 alias hoem="home"
 alias dev="cd ~/dev"
@@ -11,13 +11,17 @@ alias dotfiles="cd ~/dev/dotfiles"
 
 # -----------------------------------------------
 # shorthand commands
-# -----------------------------------------------
+# 
 alias l="ls -BA1Fh"
 alias la="ls -lAh"
 alias ll="ls -lAh"
+
 alias mv="mv -v"
 alias mkdir="mkdir -v"
+
 alias o="open ."
+
+alias listusers="awk -F: '{ print $1}' /etc/passwd"
 
 alias editaliases="vim ~/.aliases"
 alias editrc="vim ~/.bashrc"
@@ -25,7 +29,7 @@ alias vimrc="vim ~/.vimrc"
 
 # -----------------------------------------------
 # programs/apps
-# -----------------------------------------------
+# 
 # websites
 alias github="osascript -e 'tell application \"Firefox\" to activate' -e 'tell application \"Firefox\" to open location \"https://github.com/\"'"
 alias gmail="osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"Google Chrome\" to open location \"https://gmail.com/\"'"
@@ -63,7 +67,7 @@ alias phpxdebug="php -d xdebug.remote_autostart=On"
 
 # -----------------------------------------------
 # Mac OS
-# -----------------------------------------------
+# 
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
 
 alias audiointernal="audiodevice output Internal\ Speakers"
