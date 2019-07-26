@@ -15,11 +15,16 @@ DIR='\[$(tput setaf 4)\]\W'
 PROMPT='\[$(tput sgr0)\]>'
 export PS1="${ARROW} ${USER}${DIV}${DIR} ${PROMPT} "
 
-# The contents of this variable are executed as a regular Bash command just before Bash displays a prompt.
+# The contents of this variable are executed as a regular Bash command
+# just before Bash displays a prompt.
 export PROMPT_COMMAND="echo '--'"
 
+# Store unlimited history
+export HISTSIZE=
+export HISTFILESIZE=
+
 # Add timestamp to history
-export HISTTIMEFORMAT="%d/%m/%y %T "
+export HISTTIMEFORMAT="%d/%m/%y %T"
 
 # Present a better git status
 function gits {
