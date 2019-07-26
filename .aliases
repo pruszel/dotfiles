@@ -7,14 +7,15 @@ alias dev="cd ~/dev"
 alias sites="cd ~/sites"
 alias scripts="cd ~/scripts"
 alias dotfiles="cd ~/dev/dotfiles"
+alias bei="cd ~/sites/burlingameengineers.com"
 
 
 # -----------------------------------------------
 # shorthand commands
 # 
 alias l="ls -BA1Fh"
-alias la="ls -lAh"
 alias ll="ls -lAh"
+alias la="ls -lAh"
 
 alias mv="mv -v"
 alias mkdir="mkdir -v"
@@ -58,8 +59,7 @@ alias gittrack='git push --set-upstream origin $(gitb)'
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 
-# run vim with custom settings in non-default location
-#alias vi="vi -u ~/.config/.vimrc"
+alias vi="vim"
 
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
