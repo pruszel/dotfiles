@@ -61,6 +61,9 @@ alias dcd="docker-compose down"
 
 alias vi="vim"
 
+# Remove TypeScript alias
+unalias script
+
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
 
