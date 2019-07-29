@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 
+# Handy variables
+export DIRNAME="$(basename \"$PWD\")"
+
 # Activate vi mode with <Escape>
 set -o vi
 
