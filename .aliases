@@ -17,10 +17,13 @@ alias l="ls -BA1Fh"
 alias ll="ls -lAh"
 alias la="ls -lAh"
 
+alias ..="cd ../"
 alias mv="mv -v"
 alias mkdir="mkdir -v"
 
 alias o="open ."
+# grep history
+alias gh='history|grep'
 
 alias listusers="awk -F: '{ print $1}' /etc/passwd"
 

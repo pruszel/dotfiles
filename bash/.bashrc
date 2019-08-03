@@ -2,7 +2,9 @@
 #[ -z "$PS1" ] && return
 
 # Handy variables
-export DIRNAME="$(basename $PWD)"
+# export DIRNAME="$(basename $PWD)"
+# Number of files in current directory
+# export FILECOUNT="$(find . -type f | wc -l)"
 
 # Activate vi mode with <Escape>
 set -o vi
@@ -11,12 +13,12 @@ set -o vi
 shopt -s autocd
 
 # Set prompt
-ARROW='\[$(tput setaf 2)\]➜ '
-USER='\[$(tput bold)$(tput setaf 4)\]\u'
-DIV='\[$(tput setaf 7)\]:'
-DIR='\[$(tput setaf 4)\]\W'
-PROMPT='\[$(tput sgr0)\]>'
-export PS1="${ARROW} ${USER}${DIV}${DIR} ${PROMPT} "
+PS1_ARROW='\[$(tput setaf 2)\]➜ '
+PS1_USER='\[$(tput bold)$(tput setaf 4)\]\u'
+PS1_DIV='\[$(tput setaf 7)\]:'
+PS1_DIR='\[$(tput setaf 4)\]\W'
+PS1_PROMPT='\[$(tput sgr0)\]>'
+export PS1="${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
 
 # The contents of this variable are executed as a regular Bash command
 # just before Bash displays a prompt.
@@ -31,7 +33,8 @@ export HISTTIMEFORMAT="%d/%m/%y %T"
 
 # Present a better git status
 function gits {
-  if [ -d .git ]; then
+  gitdir="$(git rev-parse --show-toplevel)"
+  if [ -n $gitdir ]; then
     # display branch name
     echo -n "On ";
     tput setaf 2; tput smul
