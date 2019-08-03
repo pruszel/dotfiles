@@ -6,8 +6,12 @@ set nocompatible
 " Key mappings
 "
 let mapleader =","
+" Copy to clipboard
+vmap <C-c> :w !pbcopy<CR><CR>
 " Save
 nnoremap <leader>s :w<CR>
+" Quit
+nnoremap <leader>q :q<CR>
 " Yank from cursor to end of line
 nnoremap Y y$
 " Toggle folds (<Space>)
