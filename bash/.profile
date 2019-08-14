@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Add user scripts to PATH
-export PATH="$PATH:/usr/local/bin/"
+#export PATH="$PATH:/usr/local/bin/"
 
 # Add RVM to PATH. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"

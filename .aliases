@@ -27,6 +27,8 @@ alias gh='history|grep'
 
 alias listusers="awk -F: '{ print $1}' /etc/passwd"
 
+alias rmnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
+
 alias editaliases="vim ~/.aliases"
 alias editrc="vim ~/.bashrc"
 alias vimrc="vim ~/.vimrc"
