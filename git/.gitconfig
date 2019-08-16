@@ -12,6 +12,11 @@
 [commit]
 	template = /Users/peter/.stCommitMsg
 [alias]
+    a = add .
+    c = commit
+    p = push
+    s = status -s
+    ss = status
     master = checkout master
     develop = checkout develop
     staging = checkout staging
@@ -23,4 +28,4 @@
     new = checkout -b
     branches = branch -v
     stashes = stash list
-    ss = status -s
+    zip = archive --format=zip -o latest.zip HEAD
