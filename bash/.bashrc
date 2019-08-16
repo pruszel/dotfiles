@@ -45,14 +45,14 @@ function gits {
   if [ -n $gitdir ]; then
     # display branch name
     echo -n "On ";
-    tput setaf 2; tput smul
+    tput setaf 2; tput smul;
     echo $(git rev-parse --abbrev-ref HEAD);
     echo;
 
-    # display git ss (simple status)
-    tput sgr0; 
-    git ss;
-    [ -z "$(git ss)" ] && echo "No changes."
+    # display simple git status
+    tput sgr0;
+    git status -s;
+    [ -z "$(git status -s)" ] && echo "No changes."
   else
     tput setaf 1;
     echo "Not a git repo."

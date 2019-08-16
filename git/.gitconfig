@@ -14,6 +14,7 @@
 [alias]
     a = add .
     c = commit
+    d = diff
     p = push
     s = status -s
     ss = status
