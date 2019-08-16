@@ -17,15 +17,23 @@
     p = push
     s = status -s
     ss = status
+
+    l = !"git lg-simple"
+    lg = !"git lg-tree"
+    lg-simple = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg-tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+
     master = checkout master
     develop = checkout develop
     staging = checkout staging
     co = checkout
-    subup = submodule update
-    remotes = remote -v
-    delete = branch -d
-    erase = !git branch -d $1 && git push origin --delete $1
     new = checkout -b
+    delete = branch -d
+    erase = !"git branch -d $1 && git push origin --delete $1"
+
+    remotes = remote -v
     branches = branch -v
     stashes = stash list
+
     zip = archive --format=zip -o latest.zip HEAD
+    subup = submodule update
