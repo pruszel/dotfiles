@@ -1,0 +1,31 @@
+# -----------------------------------------------
+# common directories 
+# 
+alias dev="cd ~/dev"
+alias sites="cd ~/sites"
+alias bei="cd ~/sites/burlingameengineers.com"
+
+
+# -----------------------------------------------
+# programs/apps
+# 
+# websites
+alias github="osascript -e 'tell application \"Firefox\" to activate' -e 'tell application \"Firefox\" to open location \"https://github.com/\"'"
+alias gmail="osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"Google Chrome\" to open location \"https://gmail.com/\"'"
+
+alias sourcetree="open -a ~/Applications/SourceTree.app"
+alias st="sourcetree ."
+
+alias ff="osascript -e 'tell application \"Firefox\" to activate'"
+alias subliem="sublime"
+alias subl="sublime"
+
+
+# -----------------------------------------------
+# Mac OS
+# 
+alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
+
+alias audiointernal="audiodevice output Internal\ Speakers"
+alias audioappletv="audiodevice output Apple\ TV"
+alias audioheadphones="audiodevice output Headphones"

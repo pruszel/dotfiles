@@ -3,11 +3,8 @@
 # 
 alias home="cd ~"
 alias hoem="home"
-alias dev="cd ~/dev"
-alias sites="cd ~/sites"
 alias scripts="cd ~/scripts"
-alias dotfiles="cd ~/dev/dotfiles"
-alias bei="cd ~/sites/burlingameengineers.com"
+alias dotfiles="cd ~/dotfiles"
 
 
 # -----------------------------------------------
@@ -33,31 +30,19 @@ alias editaliases="vim ~/.aliases"
 alias editrc="vim ~/.bashrc"
 alias vimrc="vim ~/.vimrc"
 
+
 # -----------------------------------------------
 # programs/apps
 # 
-# websites
-alias github="osascript -e 'tell application \"Firefox\" to activate' -e 'tell application \"Firefox\" to open location \"https://github.com/\"'"
-alias gmail="osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"Google Chrome\" to open location \"https://gmail.com/\"'"
-
-alias sourcetree="open -a ~/Applications/SourceTree.app"
-alias st="sourcetree ."
-
-alias ff="osascript -e 'tell application \"Firefox\" to activate'"
-alias subliem="sublime"
-alias subl="sublime"
-
 # Git
 # alias git="hub"
-# todo fix when not in git repo
-#alias gits="[ -z \"$(gits)\" ] && git status -s;  [ -n \"$(gits)\" ] && gits"
 alias gitp="git pull"
 alias gitpp="git push"
 alias gitc="git checkout"
 alias gitl="git lg"
 alias gitf="git fetch --all"
 alias gitb="git rev-parse --abbrev-ref HEAD"
-alias gitconfig="sublime ~/.gitconfig"
+alias gitconfig="vim ~/.gitconfig"
 alias gittrack='git push --set-upstream origin $(gitb)'
 
 # Docker
@@ -71,13 +56,3 @@ alias vi="vim"
 
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
-
-
-# -----------------------------------------------
-# Mac OS
-# 
-alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
-
-alias audiointernal="audiodevice output Internal\ Speakers"
-alias audioappletv="audiodevice output Apple\ TV"
-alias audioheadphones="audiodevice output Headphones"
