@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Add user scripts to PATH
 #export PATH="$PATH:/usr/local/bin/"
 
@@ -18,9 +16,6 @@ export CLICOLOR=1
 
 # Source .bashrc
 echo "$0" | grep "bash$" > /dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
-
-# Source aliases
-[ -f ~/.aliases ] && source "$HOME/.aliases"
 
 # iTerm2 shell integration utilities
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

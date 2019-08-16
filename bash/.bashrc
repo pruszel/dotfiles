@@ -1,5 +1,8 @@
+# Source aliases
+[ -f ~/.aliases ] && source "$HOME/.aliases"
+
 # Source OS-specific aliases
-[[ "$OSTYPE" == "darwin"* ]] && source "$HOME/.aliases.macos"
+[[ "$OSTYPE" == "darwin"* ]] && [ -f ~/.aliases.macos ] && source "$HOME/.aliases.macos"
 
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
@@ -33,6 +36,8 @@ export HISTFILESIZE=
 
 # Add timestamp to history
 export HISTTIMEFORMAT="%d/%m/%y %T"
+
+export EDITOR="vim"
 
 # Present a better git status
 function gits {
