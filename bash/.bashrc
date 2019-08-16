@@ -1,3 +1,6 @@
+# Source OS-specific aliases
+[[ "$OSTYPE" == "darwin"* ]] && source "$HOME/.aliases.macos"
+
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 

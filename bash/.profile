@@ -19,7 +19,7 @@ export CLICOLOR=1
 # Source .bashrc
 echo "$0" | grep "bash$" > /dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
-# Source .aliases
+# Source aliases
 [ -f ~/.aliases ] && source "$HOME/.aliases"
 
 # iTerm2 shell integration utilities
