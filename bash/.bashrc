@@ -24,18 +24,14 @@ PS1_USER='\[$(tput bold)$(tput setaf 4)\]\u'
 PS1_DIV='\[$(tput setaf 7)\]:'
 PS1_DIR='\[$(tput setaf 4)\]\W'
 PS1_PROMPT='\[$(tput sgr0)\]>'
-export PS1="${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
-
-# The contents of this variable are executed as a regular Bash command
-# just before Bash displays a prompt.
-export PROMPT_COMMAND="echo '--'"
+PS1="--\n${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
 
 # Store unlimited history
-export HISTSIZE=
-export HISTFILESIZE=
+HISTSIZE=
+HISTFILESIZE=
 
 # Add timestamp to history
-export HISTTIMEFORMAT="%d/%m/%y %T"
+HISTTIMEFORMAT="%F %T "
 
 export EDITOR="vim"
 

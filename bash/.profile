@@ -19,4 +19,3 @@ echo "$0" | grep "bash$" > /dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashr
 
 # iTerm2 shell integration utilities
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
