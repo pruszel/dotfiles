@@ -24,7 +24,7 @@ PS1_USER='\[$(tput bold)$(tput setaf 4)\]\u'
 PS1_DIV='\[$(tput setaf 7)\]:'
 PS1_DIR='\[$(tput setaf 4)\]\W'
 PS1_PROMPT='\[$(tput sgr0)\]>'
-PS1="--\n${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
+PS1="\n--\n${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
 
 # Store unlimited history
 HISTSIZE=
