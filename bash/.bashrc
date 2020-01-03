@@ -4,6 +4,9 @@
 # Source OS-specific aliases
 [[ "$OSTYPE" == "darwin"* ]] && [ -f ~/.aliases.macos ] && source "$HOME/.aliases.macos"
 
+# Remove TypeScript alias
+[[ $(type -t script) == "alias" ]] && unalias script
+
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 
@@ -34,42 +37,3 @@ HISTFILESIZE=
 HISTTIMEFORMAT="%F %T "
 
 export EDITOR="vim"
-
-# Present a better git status
-function gits {
-  gitdir="$(git rev-parse --show-toplevel)"
-  if [ -n $gitdir ]; then
-    # display branch name
-    echo -n "On ";
-    tput setaf 2; tput smul;
-    echo $(git rev-parse --abbrev-ref HEAD);
-    echo;
-
-    # display simple git status
-    tput sgr0;
-    git status -s;
-    [ -z "$(git status -s)" ] && echo "No changes."
-  else
-    tput setaf 1;
-    echo "Not a git repo."
-    tput sgr0;
-  fi
-}
-export -f gits
-
-function cat {
-  if [ -x "$(command -v ccat)" ];
-  then
-    ccat "$@"
-  else
-    cat "$@"
-  fi
-}
-export -f cat
-
-# Connect to pre-defined servers
-#function server {
-  
-#}
-#export -f server
-
