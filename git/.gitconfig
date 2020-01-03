@@ -1,13 +1,13 @@
 [user]
-	name = Peter Ruszel
-	email = peter@phpete.me
+	name = Peter Lopez
+	email = peter@peterlopez.me
 [core]
 	excludesfile = /Users/peter/.gitignore_global
 [difftool "sourcetree"]
-	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /Users/peter/Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [commit]
 	template = /Users/peter/.stCommitMsg
@@ -26,6 +26,7 @@
 
     master = checkout master
     develop = checkout develop
+    dev = checkout dev
     staging = checkout staging
     co = checkout
     new = checkout -b
