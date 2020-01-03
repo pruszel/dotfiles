@@ -24,10 +24,12 @@ alias gh='history|grep'
 
 alias listusers="awk -F: '{ print $1}' /etc/passwd"
 
+alias wanip="curl ifconfig.me"
+
 alias rmnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
 
 alias editaliases="vim ~/.aliases"
-alias editrc="vim ~/.bashrc"
+alias bashrc="vim ~/.bashrc"
 alias vimrc="vim ~/.vimrc"
 
 
@@ -36,6 +38,7 @@ alias vimrc="vim ~/.vimrc"
 # 
 # Git
 # alias git="hub"
+alias gits="git status -s"
 alias gitp="git pull"
 alias gitpp="git push"
 alias gitc="git checkout"
@@ -51,9 +54,3 @@ alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 
 alias vi="vim"
-
-# Remove TypeScript alias
-[[ $(type -t script) == "alias" ]] && unalias script
-
-# Run php script with Xdebug enabled
-alias phpxdebug="php -d xdebug.remote_autostart=On"

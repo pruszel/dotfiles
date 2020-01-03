@@ -3,8 +3,10 @@
 # 
 alias dev="cd ~/dev"
 alias sites="cd ~/sites"
+alias projects="cd ~/dev/projects"
 alias bei="cd ~/sites/burlingameengineers.com"
 alias lp="cd ~/sites/thelunchpicker.com"
+alias codefu="cd ~/dev/projects/codefu"
 
 
 # -----------------------------------------------
@@ -20,6 +22,9 @@ alias st="sourcetree ."
 alias ff="osascript -e 'tell application \"Firefox\" to activate'"
 alias subliem="sublime"
 alias subl="sublime"
+
+# Run php script with Xdebug enabled
+alias phpxdebug="php -d xdebug.remote_autostart=On"
 
 
 # -----------------------------------------------
