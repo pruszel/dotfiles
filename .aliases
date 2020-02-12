@@ -29,7 +29,7 @@ alias wanip="curl ifconfig.me"
 alias rmnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
 
 alias editaliases="vim ~/.aliases"
-alias bashrc="vim ~/.bashrc"
+alias zshrc="$EDITOR ~/.bashrc"
 alias vimrc="vim ~/.vimrc"
 
 
@@ -54,3 +54,6 @@ alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 
 alias vi="vim"
+alias subl="sublime"
+alias rm="rmtrash"
+alias diff="colordiff"
