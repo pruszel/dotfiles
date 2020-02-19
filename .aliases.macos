@@ -12,6 +12,9 @@ alias codefu="cd ~/sites/codefu"
 # -----------------------------------------------
 # programs/apps
 # 
+alias dockerapp="open -a /Applications/Docker.app"
+alias dockerappquit="osascript -e 'quit app \"Docker.app\"'"
+
 alias sourcetree="open -a /Applications/SourceTree.app"
 alias st="sourcetree ."
 

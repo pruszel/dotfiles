@@ -19,6 +19,9 @@ alias mv="mv -v"
 alias mkdir="mkdir -v"
 
 alias o="open ."
+
+alias r="ranger"
+
 # grep history
 alias gh='history|grep'
 
@@ -28,9 +31,9 @@ alias wanip="curl ifconfig.me"
 
 alias rmnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
 
-alias editaliases="vim ~/.aliases"
-alias zshrc="$EDITOR ~/.bashrc"
-alias vimrc="vim ~/.vimrc"
+alias editaliases="$EDITOR ~/.config/.aliases"
+alias zshrc="$EDITOR ~/.zshrc"
+alias vimrc="$EDITOR ~/.vimrc"
 
 
 # -----------------------------------------------
@@ -47,7 +50,7 @@ alias gitd="git diff"
 alias gitl="git lg"
 alias gitf="git fetch --all"
 alias gitb="git rev-parse --abbrev-ref HEAD"
-alias gitconfig="vim ~/.gitconfig"
+alias gitconfig="$EDITOR ~/.gitconfig"
 alias gittrack='git push --set-upstream origin $(gitb)'
 
 # Docker
