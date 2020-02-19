@@ -6,8 +6,6 @@ set nocompatible
 " Key mappings
 "
 let mapleader =","
-" Copy to clipboard
-vmap <C-c> :w !pbcopy<CR><CR>
 " Save
 nnoremap <leader>s :w<CR>
 " Quit
@@ -16,8 +14,9 @@ nnoremap <leader>q :q<CR>
 nnoremap Y y$
 " Toggle folds (<Space>)
 noremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
-" Insert mode bindings
-:imap <M-s> <Esc>:w<kEnter>
+" Exit insert mode using ii
+:imap ii <Esc>
+
 
 " ------------------------
 " File types
@@ -114,4 +113,3 @@ set wildmenu " Hitting TAB in command mode will show possible completions above 
 set wildmode=list:longest " Complete only until point of ambiguity.
 set winminheight=0 "Allow splits to be reduced to a single line.
 set wrapscan " Searches wrap around end of file
-
