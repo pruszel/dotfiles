@@ -1,19 +1,24 @@
 export DOTFILES="$HOME/dotfiles"
-export EDITOR="vim"
 export HOMEBREW_NO_ANALYTICS=1
 export KEYTIMEOUT=1
+
+# red dots will be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# Ignore these extensions for tab completion
+fignore=(DS_Store localized)
+
+# cd into directory just by typing its name
+setopt autocd
+
+setopt extendedglob
 
 # Enable colors
 autoload -U colors && colors
 
 # Set prompt
-PS1_ARROW='\[$(tput setaf 2)\]➜ '
-PS1_USER='\[$(tput bold)$(tput setaf 4)\]\u'
-PS1_DIV='\[$(tput setaf 7)\]:'
-PS1_DIR='\[$(tput setaf 4)\]\W'
-PS1_PROMPT='\[$(tput sgr0)\]>'
-PS1="\n--\n${PS1_ARROW} ${PS1_USER}${PS1_DIV}${PS1_DIR} ${PS1_PROMPT} "
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+NEWLINE=$'\n'
+PS1="${NEWLINE}--${NEWLINE}%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%m:%{$fg[magenta]%}%~%{$fg[red]%}%{$reset_color%} $ %b"
 
 # History
 HISTSIZE=10000
@@ -62,8 +67,8 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# red dots will be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# Move to start of line
+#bindkey '^a' vi-beginning-of-line
 
 # Source aliases
 [ -f ~/.config/.aliases ] && source "$HOME/.config/.aliases"
