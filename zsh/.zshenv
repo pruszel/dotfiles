@@ -1,5 +1,5 @@
-ZDOTDIR=$HOME/.config/zsh
 export EDITOR="vim"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
