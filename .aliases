@@ -57,6 +57,6 @@ alias gittrack='git push --set-upstream origin $(gitb)'
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 
+alias v="vim"
 alias vi="vim"
-alias rm="rmtrash"
 alias diff="colordiff"
