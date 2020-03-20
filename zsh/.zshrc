@@ -71,8 +71,8 @@ bindkey '^e' edit-command-line
 #bindkey '^a' vi-beginning-of-line
 
 # Source aliases
-[ -f ~/.config/.aliases ] && source "$HOME/.config/.aliases"
-[ -f ~/.config/.aliases.local ] && source "$HOME/.config/.aliases.local"
+[ -f ~/.aliases ] && source "$HOME/.aliases"
+[ -f ~/.aliases.local ] && source "$HOME/.aliases.local"
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
