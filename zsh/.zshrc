@@ -74,5 +74,11 @@ bindkey '^e' edit-command-line
 [ -f ~/.aliases ] && source "$HOME/.aliases"
 [ -f ~/.aliases.local ] && source "$HOME/.aliases.local"
 
+GCLOUD="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+[ -f "$GCLOUD" ] && source "$GCLOUD";
+GCLOUD="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+[ -f "$GCLOUD" ] && source "$GCLOUD";
+
 # Load zsh-syntax-highlighting; should be last.
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+HIGHLIGHT="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[ -f "$HIGHLIGHT" ] && source "$HIGHLIGHT" 2>/dev/null
