@@ -5,6 +5,12 @@ set nocompatible
 filetype plugin on
 
 " ---------------------------
+" set location of swap, backup, and undo files
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+" ---------------------------
 " netrw config
 "
 let g:netrw_liststyle = 3
