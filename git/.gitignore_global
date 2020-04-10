@@ -1,2 +1,6 @@
+# Ignore vim backup, swap, and undo files
 *~
+*.swp
+
+# Ignore MacOS Finder metadata files
 .DS_Store

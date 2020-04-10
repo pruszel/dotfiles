@@ -10,12 +10,13 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
-    a = add .
+    a = add
+    b = branch
     c = commit
     d = diff
     p = push
-    s = status -s
-    ss = status
+    s = status
+    ss = status -s
 
     l = !"git lg-simple"
     lg = !"git lg-tree"
