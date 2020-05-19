@@ -10,9 +10,9 @@ alias dotfiles="cd ~/dotfiles"
 # -----------------------------------------------
 # shorthand commands
 # 
-alias l="ls -BA1Fh"
-alias ll="ls -lAh"
-alias la="ls -lAh"
+alias l="ls -BA1FhL"
+alias ll="ls -lLAh"
+alias la="ls -lLAh"
 
 alias ..="cd ../"
 alias mv="mv -v"
