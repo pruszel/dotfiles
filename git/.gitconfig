@@ -27,6 +27,8 @@
     develop = checkout develop
     dev = checkout dev
     staging = checkout staging
+    test = checkout test
+
     co = checkout
     new = checkout -b
     delete = branch -d
