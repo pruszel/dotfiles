@@ -23,7 +23,7 @@ alias o="open ."
 alias r="ranger"
 
 # grep history
-alias gh='history|grep'
+# alias gh='history|grep'
 
 alias listusers="awk -F: '{ print $1}' /etc/passwd"
 
