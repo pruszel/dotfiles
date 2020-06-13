@@ -6,12 +6,12 @@ alias sites="cd ~/sites"
 alias projects="cd ~/dev/projects"
 alias bei="cd ~/sites/burlingameengineers.com"
 alias lp="cd ~/sites/thelunchpicker.com"
-alias codefu="cd ~/sites/codefu"
 
 
 # -----------------------------------------------
 # programs/apps
 # 
+alias r="ranger"
 alias rm="rmtrash"
 
 alias dockerapp="open -a /Applications/Docker.app"
@@ -26,6 +26,7 @@ alias subl="sublime"
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
 
+alias wakepc="wakeonlan E0:d5:5e:27:99:07"
 
 # -----------------------------------------------
 # Mac OS
