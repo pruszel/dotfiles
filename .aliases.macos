@@ -4,6 +4,7 @@
 alias dev="cd ~/dev"
 alias sites="cd ~/sites"
 alias projects="cd ~/dev/projects"
+
 alias bei="cd ~/sites/burlingameengineers.com"
 alias lp="cd ~/sites/thelunchpicker.com"
 
@@ -11,14 +12,14 @@ alias lp="cd ~/sites/thelunchpicker.com"
 # -----------------------------------------------
 # programs/apps
 # 
-alias r="ranger"
+alias o="open ."
 alias rm="rmtrash"
 
 alias dockerapp="open -a /Applications/Docker.app"
 alias dockerappquit="osascript -e 'quit app \"Docker.app\"'"
 
 alias sourcetree="open -a /Applications/SourceTree.app"
-alias st="sourcetree ."
+alias st="sourcetree"
 
 alias subliem="sublime"
 alias subl="sublime"

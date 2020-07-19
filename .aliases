@@ -1,40 +1,59 @@
 # -----------------------------------------------
-# common directories 
+# commonly used directories 
 # 
 alias home="cd ~"
 alias hoem="home"
 alias scripts="cd ~/scripts"
 alias dotfiles="cd ~/dotfiles"
 
+alias vw="cd /var/www/"
+alias a2conf="cd /etc/apache2/sites-available"
+
 
 # -----------------------------------------------
 # shorthand commands
 # 
-alias l="ls -BA1FhL"
-alias ll="ls -lLAh"
-alias la="ls -lLAh"
+alias l="ls -BA1FhL --group-directories-first --color=always"
+#alias ll="ls -lLAh"
+alias ll="ls -AhF --group-directories-first --color=always"
+alias la="ls -lLAh --group-directories-first --color=always"
 
 alias ..="cd ../"
+
+alias cp="cp -v"
 alias mv="mv -v"
 alias mkdir="mkdir -v"
 
-alias o="open ."
-
+alias v="vim"
+alias vi="vim"
 alias r="ranger"
+alias diff="colordiff"
 
 # grep history
 # alias gh='history|grep'
 
-alias listusers="awk -F: '{ print $1}' /etc/passwd"
 
+# Networking stuff
+alias pscan="nmap 0.0.0.0"
 alias wanip="curl ifconfig.me"
 alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 
-alias rmnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
 
+# Handy utilities
+alias listusers="awk -F: '{ print $1}' /etc/passwd"
+
+alias delnodemodules="find . -name 'node_modules' -type d -exec rm -rf '{}' +"
+alias dnm="deletenodemodules"
+
+# fix permissions for ~/.ssh
+# alias sshperms="chmod 700 ~/.ssh; chmod 644 ~/ssh/id.pub; chmod 600..."
+
+
+# Quickly edit config files
 alias editaliases="$EDITOR ~/.config/.aliases"
 alias zshrc="$EDITOR ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
+alias sshconfig="$EDITOR /etc/ssh/sshd_config"
 
 
 # -----------------------------------------------
@@ -57,7 +76,3 @@ alias gittrack='git push --set-upstream origin $(gitb)'
 # Docker
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
-
-alias v="vim"
-alias vi="vim"
-alias diff="colordiff"
