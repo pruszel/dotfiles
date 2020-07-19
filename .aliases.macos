@@ -1,5 +1,5 @@
 # -----------------------------------------------
-# common directories 
+# commonly used directories 
 # 
 alias dev="cd ~/dev"
 alias sites="cd ~/sites"
@@ -27,7 +27,10 @@ alias subl="sublime"
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"
 
+# Network stuff
 alias wakepc="wakeonlan E0:d5:5e:27:99:07"
+alias maplan="nmap '10.0.0.*'"
+
 
 # -----------------------------------------------
 # Mac OS
