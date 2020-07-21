@@ -8,6 +8,8 @@ alias projects="cd ~/dev/projects"
 alias bei="cd ~/sites/burlingameengineers.com"
 alias lp="cd ~/sites/thelunchpicker.com"
 
+alias tcs="cd '/Volumes/GoogleDrive/My Drive/Work/The Coder School/Students'"
+
 
 # -----------------------------------------------
 # programs/apps
