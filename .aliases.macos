@@ -14,6 +14,12 @@ alias tcs="cd '/Volumes/GoogleDrive/My Drive/Work/The Coder School/Students'"
 # -----------------------------------------------
 # programs/apps
 # 
+alias l="ls -A1hLG"
+alias ls="ls -G"
+#alias ll="ls -lLAh"
+alias ll="ls -AhFG"
+alias la="ls -lLAhFG"
+
 alias o="open ."
 alias rm="rmtrash"
 

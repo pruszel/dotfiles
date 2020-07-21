@@ -13,12 +13,6 @@ alias a2conf="cd /etc/apache2/sites-available"
 # -----------------------------------------------
 # shorthand commands
 # 
-alias l="ls -BA1hL --group-directories-first --color=always"
-alias ls="ls --color=always"
-#alias ll="ls -lLAh"
-alias ll="ls -BAhF --group-directories-first --color=always"
-alias la="ls -BlLAhF --group-directories-first --color=always"
-
 alias ..="cd ../"
 
 alias cp="cp -v"
