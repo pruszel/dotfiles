@@ -21,7 +21,12 @@ alias mkdir="mkdir -v"
 
 alias v="vim"
 alias vi="vim"
+
 alias r="ranger"
+# trying to change shell to last open ranger dir
+# upon closing ranger, but not working
+# alias ranger="ranger --choosedir=$HOME/.config/ranger/.rangerdir; LASTDIR=`cat $HOME/.config/ranger/.rangerdir`; echo \"$LASTDIR\"; cd \"$LASTDIR\""
+
 alias diff="colordiff"
 
 # grep history
