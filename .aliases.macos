@@ -7,6 +7,7 @@ alias projects="cd ~/dev/projects"
 
 alias bei="cd ~/sites/burlingameengineers.com"
 alias lp="cd ~/sites/thelunchpicker.com"
+alias yip="cd ~/sites/yearinpixels"
 
 alias tcs="cd '/Volumes/GoogleDrive/My Drive/Work/The Coder School/Students'"
 
@@ -24,13 +25,18 @@ alias o="open ."
 alias rm="rmtrash"
 
 alias dockerapp="open -a /Applications/Docker.app"
+alias d="open -a /Applications/Docker.app"
+
 alias dockerappquit="osascript -e 'quit app \"Docker.app\"'"
+
 
 alias sourcetree="open -a /Applications/SourceTree.app"
 alias st="sourcetree"
 
 alias subliem="sublime"
 alias subl="sublime"
+
+alias ck="open -a /Applications/CodeKit.app"
 
 # Run php script with Xdebug enabled
 alias phpxdebug="php -d xdebug.remote_autostart=On"

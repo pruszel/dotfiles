@@ -50,7 +50,7 @@ alias dnm="deletenodemodules"
 
 
 # Quickly edit config files
-alias editaliases="$EDITOR ~/.config/.aliases"
+alias editaliases="$EDITOR ~/.aliases"
 alias zshrc="$EDITOR ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias sshconfig="$EDITOR /etc/ssh/sshd_config"
