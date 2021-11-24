@@ -6,6 +6,8 @@ filetype plugin on
 
 " ---------------------------
 " set location of swap, backup, and undo files
+"
+
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
@@ -13,6 +15,7 @@ set undodir=/tmp//
 " ---------------------------
 " netrw config
 "
+
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_altv = 1
@@ -23,6 +26,7 @@ let g:netrw_winsize = 25
 " ---------------------------
 " Key mappings
 "
+
 let mapleader =","
 " Save
 nnoremap <leader>s :w<CR>
@@ -39,6 +43,7 @@ noremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 
 " ------------------------
 " File types
 "
+
 " Read JSON as JavaScript
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 "Configure whitespace settings
@@ -54,6 +59,7 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab smarttab
 " ------------------------
 " Editor config
 "
+
 " Syntax highlighting
 set t_Co=256
 set background=dark
