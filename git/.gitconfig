@@ -1,8 +1,9 @@
 [user]
-	name = Peter Lopez
-	email = peter@peterlopez.me
+	name = Peter Ruszel
+	email = 3279147+peterlopez@users.noreply.github.com
 [core]
 	excludesfile = /Users/peter/.gitignore_global
+    ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
