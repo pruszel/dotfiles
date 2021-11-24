@@ -1,52 +1,18 @@
 # -----------------------------------------------
-# commonly used directories 
+# Launch Apps
 # 
-alias dev="cd ~/dev"
-alias sites="cd ~/sites"
-alias projects="cd ~/dev/projects"
 
-alias bei="cd ~/sites/burlingameengineers.com"
-alias lp="cd ~/sites/thelunchpicker.com"
-alias yip="cd ~/sites/yearinpixels"
+# SourceTree
+alias sourcetree="open -a /Applications/SourceTree.app"
+alias st="sourcetree ."
 
-alias tcs="cd '/Volumes/GoogleDrive/My Drive/Work/The Coder School/Students'"
-
-
-# -----------------------------------------------
-# programs/apps
-# 
-alias l="ls -A1hLG"
-alias ls="ls -G"
-#alias ll="ls -lLAh"
-alias ll="ls -AhFG"
-alias la="ls -lLAhFG"
-
-alias o="open ."
-alias rm="rmtrash"
-
+# Docker
 alias dockerapp="open -a /Applications/Docker.app"
-alias d="open -a /Applications/Docker.app"
-
+alias d="dockerapp"
 alias dockerappquit="osascript -e 'quit app \"Docker.app\"'"
 
 
-alias sourcetree="open -a /Applications/SourceTree.app"
-alias st="sourcetree"
-
-alias subliem="sublime"
-alias subl="sublime"
-
-alias ck="open -a /Applications/CodeKit.app"
-
-# Run php script with Xdebug enabled
-alias phpxdebug="php -d xdebug.remote_autostart=On"
-
-# Network stuff
-alias wakepc="wakeonlan E0:d5:5e:27:99:07"
-alias maplan="nmap '10.0.0.*'"
-
-
 # -----------------------------------------------
-# Mac OS
+# Mac OS system config
 # 
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
