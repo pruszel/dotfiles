@@ -2,28 +2,32 @@
 	name = Peter Ruszel
 	email = 3279147+peterlopez@users.noreply.github.com
 [core]
-	excludesfile = /Users/peter/.gitignore_global
-    ignorecase = false
+	excludesfile = /Users/pruszel/.gitignore_global
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/pruszel/.stCommitMsg
+	gpgsign = true
 [alias]
     a = add
     b = branch
     c = commit
     d = diff
     p = push
-    s = status
-    ss = status -s
+    s = status -s
+    ss = status
 
     l = !"git lg-simple"
     lg = !"git lg-tree"
     lg-simple = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lg-tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
 
+    main = checkout main
     master = checkout master
     develop = checkout develop
     dev = checkout dev
@@ -41,3 +45,5 @@
 
     zip = archive --format=zip -o latest.zip HEAD
     subup = submodule update
+[init]
+	defaultBranch = main
