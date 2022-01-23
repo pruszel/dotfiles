@@ -1,3 +1,3 @@
-# [peterlopez / dotfiles](https://github.com/peterlopez/dotfiles)
+# [peterlopez/dotfiles](https://github.com/peterlopez/dotfiles)
 
-My personal collection of configuration files.
+My configuration files.
