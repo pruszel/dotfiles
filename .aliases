@@ -23,6 +23,7 @@ alias ...="cd ../; cd../;"
 
 alias la="ls -AhFG"
 alias ll="ls -lLAhFG"
+alias l="ll"
 
 alias o="open"
 alias cp="cp -v"
@@ -64,6 +65,3 @@ alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '
 # Docker
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
-
-# Sublime Text
-alias sulb="subl"

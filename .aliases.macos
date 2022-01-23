@@ -2,17 +2,20 @@
 # Launch Apps
 # 
 
+# Sublime Text
+alias sulb="subl"
+
 # SourceTree
 alias sourcetree="open -a /Applications/SourceTree.app"
 alias st="sourcetree ."
 
 # Docker
 alias dockerapp="open -a /Applications/Docker.app"
-alias d="dockerapp"
 alias dockerappquit="osascript -e 'quit app \"Docker.app\"'"
+alias d="dockerapp"
 
 
 # -----------------------------------------------
-# Mac OS system config
+# MacOS config
 # 
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder;"
