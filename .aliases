@@ -42,16 +42,7 @@ alias pip="pip3"
 
 alias diff="colordiff"
 
-# Git
-alias gits="git status -s"
-alias gitp="git pull"
-alias gitpp="git push"
-alias gitfp="git push -f"
-alias gitc="git checkout"
-alias gitd="git diff"
-alias gitl="git lg"
-alias gitf="git fetch --all"
-alias gitb="git rev-parse --abbrev-ref HEAD"
+alias g="git"
 
 # Squoosh image encoder
 alias squish="squoosh-cli"
@@ -63,5 +54,6 @@ alias wanip="curl ifconfig.me"
 alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 
 # Docker
-alias dcu="docker-compose up -d"
-alias dcd="docker-compose down"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias dcr="docker compose restart"
