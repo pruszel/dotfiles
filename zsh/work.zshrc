@@ -28,7 +28,7 @@ autoload -U colors && colors
 
 # Set prompt
 NEWLINE=$'\n'
-PS1="${NEWLINE}%(?.%F{green}--.%F{red}!!)%f${NEWLINE}%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%m:%{$fg[magenta]%}%~%{$fg[red]%}%{$reset_color%} $ %b"
+PS1="${NEWLINE}%(?.🤙🏼.‼️)%f${NEWLINE}%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%m:%{$fg[magenta]%}%~%{$fg[red]%}%{$reset_color%} $ %b"
 
 # History
 HISTSIZE=10000
