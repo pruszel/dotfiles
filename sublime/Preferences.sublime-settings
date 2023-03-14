@@ -1,5 +1,8 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
-    "font_size": 13,
+    "font_face": "FiraCode-Retina, Menlo, Monaco, Courier New, monospace",
+    "font_size": 18,
 
     "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
     "theme": "Adaptive.sublime-theme",
@@ -12,5 +15,13 @@
 
     "ensure_newline_at_eof_on_save": true,
 
-    "word_wrap": false
+    "word_wrap": false,
+
+    "ignored_packages":
+    [
+        "Six",
+        "Vintage",
+        "Vintageous",
+    ],
+    "neovintageous_build_version": 12700,
 }
