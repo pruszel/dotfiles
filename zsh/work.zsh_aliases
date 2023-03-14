@@ -1,6 +1,7 @@
+# DO NOT USE - aliases moved to Fig App
+
 # -----------------------------------------------
 # common directories 
-#
 
 alias h="cd ~"
 alias home="cd ~"
@@ -16,7 +17,6 @@ alias dotfiles="cd ~/dotfiles"
 
 # -----------------------------------------------
 # shorthand commands
-#
 
 alias ..="cd ../"
 alias ...="cd ../; cd../;"
@@ -32,8 +32,8 @@ alias mkdir="mkdir -pv"
 
 alias rm="trash"
 
-alias v="vim"
-alias vi="vim"
+alias v="nvim"
+alias v.="nvim"
 
 alias r="ranger"
 
