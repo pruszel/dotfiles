@@ -3,6 +3,7 @@
 	email = 3279147+peterlopez@users.noreply.github.com
 [core]
 	ignorecase = false
+    autocrlf = input
 [commit]
 	gpgsign = true
 [alias]
