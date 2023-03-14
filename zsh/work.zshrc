@@ -1,9 +1,5 @@
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
-
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Ignore these extensions for tab completion
 fignore=(DS_Store localized)
 
@@ -14,6 +10,8 @@ fignore=(DS_Store localized)
 export DOTFILES="$HOME/dotfiles"
 export HOMEBREW_NO_ANALYTICS=1
 export KEYTIMEOUT=1
+
+export GPG_TTY="$(tty)"
 
 # red dots will be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -28,7 +26,7 @@ autoload -U colors && colors
 
 # Set prompt
 NEWLINE=$'\n'
-PS1="${NEWLINE}%(?.🤙🏼.‼️)%f${NEWLINE}%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%m:%{$fg[magenta]%}%~%{$fg[red]%}%{$reset_color%} $ %b"
+PS1="${NEWLINE}%(?.🤙.‼️)%f${NEWLINE}%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%m:%{$fg[magenta]%}%~%{$fg[red]%}%{$reset_color%} $ %b"
 
 # History
 HISTSIZE=10000
@@ -81,15 +79,12 @@ bindkey '^e' edit-command-line
 # Move to start of line
 #bindkey '^a' vi-beginning-of-line
 
-# zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
