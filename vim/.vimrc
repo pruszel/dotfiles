@@ -4,48 +4,40 @@ set nocompatible
 " Enable plugins
 filetype plugin on
 
-" ---------------------------
 " set location of swap, backup, and undo files
-"
-
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
 
-" ---------------------------
 " netrw config
-"
-
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_altv = 1
 let g:netrw_browse_split = 3 "open files in new tab
 let g:netrw_winsize = 25
 
-
-" ---------------------------
 " Key mappings
-"
 
-let mapleader =","
+let mapleader ="<space>"
+
 " Save
 nnoremap <leader>s :w<CR>
+
 " Quit
 nnoremap <leader>q :q<CR>
+
 " Yank from cursor to end of line
 nnoremap Y y$
+
 " Toggle folds (<Space>)
 noremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
+
 " Exit insert mode using ii
-:imap ii <Esc>
-
-
-" ------------------------
-" File types
-"
+" :imap ii <Esc>
 
 " Read JSON as JavaScript
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
+
 "Configure whitespace settings
 set ts=4 sts=4 sw=4 expandtab smarttab
 autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab smarttab
@@ -55,11 +47,6 @@ autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab smarttab
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab smarttab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab smarttab
 
-
-" ------------------------
-" Editor config
-"
-
 " Syntax highlighting
 set t_Co=256
 set background=dark
@@ -68,6 +55,7 @@ syntax on
 " Theme
 colorscheme monokai
 
+" Editor config
 set relativenumber " Use relative line numbers. Current line is still in status bar.
 au BufReadPost,BufNewFile * set relativenumber
 set autoindent " Copy indent from last line when starting new line.
