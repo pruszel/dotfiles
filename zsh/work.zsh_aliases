@@ -1,48 +1,32 @@
-# DO NOT USE - aliases moved to Fig App
-
-# -----------------------------------------------
-# common directories 
-
+alias ..="cd ../"
+alias ...="cd ../; cd../;"
+alias g="git"
 alias h="cd ~"
-alias home="cd ~"
-alias hoem="home"
+alias la="ls -AhFG"
+alias ll="ls -lLAhFG"
+alias l="ll"
+alias o="open"
+alias r="ranger"
+alias v="nvim"
+
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
 alias pics="cd ~/Pictures"
 alias apps="cd ~/Applications"
-alias notes="cd ~/notes"
-alias sites="cd ~/sites"
 alias scripts="cd ~/scripts"
 alias dotfiles="cd ~/dotfiles"
+alias om="cd ~/onemedical"
 
-# -----------------------------------------------
-# shorthand commands
-
-alias ..="cd ../"
-alias ...="cd ../; cd../;"
-
-alias la="ls -AhFG"
-alias ll="ls -lLAhFG"
-alias l="ll"
-
-alias o="open"
 alias cp="cp -v"
 alias mv="mv -v"
 alias mkdir="mkdir -pv"
 
 alias rm="trash"
-
-alias v="nvim"
-alias v.="nvim"
-
-alias r="ranger"
+alias diff="colordiff"
 
 alias python="python3"
 alias pip="pip3"
-
-alias diff="colordiff"
-
-alias g="git"
+alias brew-save="brew bundle dump --file=~/dotfiles/brew/Brewfile"
 
 # Squoosh image encoder
 alias squish="squoosh-cli"
@@ -57,3 +41,5 @@ alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcr="docker compose restart"
+
+awslogin="aws sso login --profile marketing"
