@@ -26,6 +26,7 @@ alias diff="colordiff"
 
 alias python="python3"
 alias pip="pip3"
+
 alias brew-save="brew bundle dump --file=~/dotfiles/brew/Brewfile"
 
 # Squoosh image encoder
@@ -42,4 +43,4 @@ alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcr="docker compose restart"
 
-awslogin="aws sso login --profile marketing"
+alias awslogin="aws sso login --profile marketing"

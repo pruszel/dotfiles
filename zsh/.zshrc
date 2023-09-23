@@ -4,12 +4,12 @@
 fignore=(DS_Store localized)
 
 # Source aliases
-[ -f ~/.aliases ] && source "$HOME/.aliases"
-[ -f ~/.aliases.local ] && source "$HOME/.aliases.local"
+[ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
 
-export DOTFILES="$HOME/dotfiles"
 export HOMEBREW_NO_ANALYTICS=1
 export KEYTIMEOUT=1
+
+export AWS_PROFILE=marketing
 
 export GPG_TTY="$(tty)"
 
@@ -89,6 +89,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# z - jump around command
+source /opt/homebrew/etc/profile.d/z.sh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
