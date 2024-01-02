@@ -1,5 +1,6 @@
 alias ..="cd ../"
 alias ...="cd ../; cd../;"
+alias cb="pbcopy"
 alias g="git"
 alias h="cd ~"
 alias l="ls -lLAhFG"
@@ -8,6 +9,8 @@ alias la="ls -AhFG"
 alias o="open"
 alias r="ranger"
 alias v="nvim"
+alias tf="terraform"
+alias tfapply="tf apply -no-color | tee -a ~/terraform-apply.log"
 
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
@@ -23,6 +26,7 @@ alias mkdir="mkdir -pv"
 
 alias rm="trash"
 alias diff="colordiff"
+alias mux="tmuxinator"
 
 alias python="python3"
 alias pip="pip3"
@@ -42,5 +46,6 @@ alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcr="docker compose restart"
+alias dcl="docker compose logs -f"
 
 alias awslogin="aws sso login --profile marketing"
