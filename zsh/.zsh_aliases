@@ -49,3 +49,6 @@ alias dcr="docker compose restart"
 alias dcl="docker compose logs -f"
 
 alias awslogin="aws sso login --profile marketing"
+alias tfdev="terraform workspace select development"
+alias tfstaging="terraform workspace select staging"
+alias tfprod="terraform workspace select production"
