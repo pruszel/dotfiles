@@ -11,7 +11,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="geometry"
+# ZSH_THEME=""
+
+# Use custom theme installed by Homebrew
 # source: https://github.com/geometry-zsh/geometry
 source /opt/homebrew/opt/geometry/share/geometry/geometry.zsh
 
@@ -66,9 +68,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     tmux
-    zsh-syntax-highlighting
-    zsh-autosuggestions
 )
+# zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Plugin configuration
 ZSH_TMUX_AUTOSTART=true
