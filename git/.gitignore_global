@@ -1,6 +1,18 @@
+# Ignore macOS Finder metadata files
+.DS_Store
+
+node_modules/
+
+# Ignore environment-specific configuration files
+.env
+# Python
+venv/
+# Docker
+docker-compose.override.yml
+
+# Ignore Sublime Text project files
+*.sublime-workspace
+
 # Ignore vim backup, swap, and undo files
 *~
 *.swp
-
-# Ignore MacOS Finder metadata files
-.DS_Store
