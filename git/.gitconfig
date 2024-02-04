@@ -1,11 +1,28 @@
+# Copy this template to ~/.gitconfig then complete the TODOs as needed.
 [user]
 	name = Peter Ruszel
 	email = 3279147+peterlopez@users.noreply.github.com
+    # TODO: add signingkey
+    # signingkey = 
+[gpg]
+	format = ssh
+# TODO: add ssh signing program path
+# [gpg "ssh"]
+	# program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
 	ignorecase = false
     autocrlf = input
+    # TODO: copy or symlink the .gitignore_global file to home directory
+    # excludesfile = /Users/peter/.gitignore_global
 [commit]
-	gpgsign = true
+    # TODO: enable commit signing once configuration added
+	# gpgsign = true
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+[push]
+    autoSetupRemote = true
 [alias]
 	a  = add
 	b  = branch
@@ -42,9 +59,5 @@
 
 	zip = archive --format=zip -o latest.zip HEAD
 	subup = submodule update
-[init]
-	defaultBranch = main
-[pull]
-	ff = only
 [url "git@github.com:"]
 	insteadOf = https://github.com/
