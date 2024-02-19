@@ -44,6 +44,7 @@ alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '
 
 # Docker
 alias dcu="docker compose up -d"
+alias dcul="docker compose up -d && docker compose logs -f"
 alias dcd="docker compose down"
 alias dcr="docker compose restart"
 alias dcl="docker compose logs -f"
