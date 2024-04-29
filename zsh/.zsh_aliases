@@ -24,7 +24,6 @@ alias cp="cp -v"
 alias mv="mv -v"
 alias mkdir="mkdir -pv"
 
-alias rm="trash"
 alias diff="colordiff"
 alias mux="tmuxinator"
 
