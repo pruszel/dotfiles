@@ -1,12 +1,6 @@
-# TODO: Microsoft Remote Desktop
-# TODO: Xcode
-# TODO: DaisyDisk
-# TODO: Day One
-
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
+
 brew "aws-shell"
 brew "awscli"
 brew "duti"
@@ -48,21 +42,39 @@ brew "z"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
-cask "alfred"
 cask "1password"
-cask "google-drive"
-cask "logi-options-plus"
-cask "spotify"
-cask "notion"
-cask "firefox"
-cask "todoist"
-cask "istat-menus"
-cask "rectangle"
+cask "alfred"
+cask "bartender"
 cask "codewhisperer"
+cask "dash"
+cask "discord"
+cask "docker"
+cask "google-drive"
+cask "istat-menus"
+cask "jetbrains-toolbox"
+cask "figma"
+cask "firefox"
+cask "font-fira-code"
+cask "font-jetbrains-mono"
+cask "insomnia"
+cask "logi-options-plus"
+cask "notion"
+cask "rectangle"
+cask "rescuetime"
+cask "sublime-text"
+cask "spotify"
+cask "todoist"
+cask "slack"
 cask "vlc"
 cask "zoom"
+cask "visual-studio-code"
 
 mas "Amphetamine", id: 937984704
+mas "DaisyDisk", id: 411643860
+mas "Day One", id: 1055511498
 mas "Good Stopwatch", id: 1268456701
 mas "Good Timer", id: 1268457877
+mas "Microsoft Remote Desktop", id: 1295203466
 mas "Parcel - Delivery Tracking", id: 639968404
+mas "Xcode", id: 497799835
+
