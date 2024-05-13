@@ -1,6 +1,6 @@
 alias ..="cd ../"
 alias ...="cd ../; cd../;"
-alias cb="pbcopy"
+
 alias g="git"
 alias h="cd ~"
 alias l="ls -lLAhFG"
@@ -17,9 +17,15 @@ alias desk="cd ~/Desktop"
 alias pics="cd ~/Pictures"
 alias apps="cd ~/Applications"
 alias scripts="cd ~/scripts"
+alias sites="cd ~/sites"
 alias dotfiles="cd ~/dotfiles"
 alias om="cd ~/onemedical"
 
+function cdls() {
+  cd "$1" && ls -lLAhFG
+}
+alias cd='cdls'
+alias cb="pbcopy"
 alias cp="cp -v"
 alias mv="mv -v"
 alias mkdir="mkdir -pv"
