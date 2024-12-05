@@ -1,0 +1,23 @@
+name: Template
+root: ~/Developer/
+on_project_start: docker compose up -d
+windows:
+  - todo:
+      layout: tiled
+      panes:
+        - nvim ./.private/todo.txt
+        -
+  - git:
+      layout: tiled
+      panes:
+        - lazygit
+  - docker:
+      layout: even-vertical
+      panes:
+        - docker compose logs -f
+        -
+  - tests:
+      layout: even-vertical
+      panes:
+        -
+        -
