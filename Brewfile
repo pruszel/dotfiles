@@ -42,6 +42,7 @@ brew "yarn"
 brew "z"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "1password-cli"
 
 cask "1password"
 cask "alfred"
@@ -55,6 +56,7 @@ cask "istat-menus"
 cask "jetbrains-toolbox"
 cask "figma"
 cask "firefox"
+cask "firefox@developer-edition"
 cask "font-fira-code"
 cask "font-jetbrains-mono"
 cask "insomnia"
@@ -69,6 +71,7 @@ cask "slack"
 cask "vlc"
 cask "zoom"
 cask "visual-studio-code"
+cask "mactex"
 
 mas "Amphetamine", id: 937984704
 mas "DaisyDisk", id: 411643860
