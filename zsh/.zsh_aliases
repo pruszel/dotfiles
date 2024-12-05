@@ -2,6 +2,7 @@ alias ..="cd ../"
 alias ...="cd ../; cd../;"
 
 alias g="git"
+alias lg="lazygit"
 alias h="cd ~"
 alias l="ls -lLAhFG"
 alias ll="ls -lLAhFG"
@@ -11,15 +12,14 @@ alias r="ranger"
 alias v="nvim"
 alias tf="terraform"
 alias tfapply="tf apply -no-color | tee -a ~/terraform-apply.log"
+alias caff="caffeinate"
+alias shop="shopify"
 
+alias dev="cd ~/Developer"
 alias docs="cd ~/Documents"
 alias desk="cd ~/Desktop"
 alias pics="cd ~/Pictures"
 alias apps="cd ~/Applications"
-alias scripts="cd ~/scripts"
-alias sites="cd ~/sites"
-alias dotfiles="cd ~/dotfiles"
-alias om="cd ~/onemedical"
 
 function cdls() {
   cd "$1" && ls -lLAhFG
@@ -32,11 +32,9 @@ alias mkdir="mkdir -pv"
 
 alias diff="colordiff"
 alias mux="tmuxinator"
-
 alias python="python3"
 alias pip="pip3"
-
-alias brew-save="brew bundle dump --file=~/dotfiles/brew/Brewfile"
+alias brew-save="brew bundle dump --file=~/Developer/dotfiles/brew/Brewfile"
 
 # Squoosh image encoder
 alias squish="squoosh-cli"
@@ -48,14 +46,12 @@ alias wanip="curl ifconfig.me"
 alias lanip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 
 # Docker
+alias dco="docker compose"
+alias dce="docker compose exec"
 alias dcu="docker compose up -d"
 alias dcul="docker compose up -d && docker compose logs -f"
+alias dcrebuild="docker compose down && docker compose build && docker compose up -d && docker compose logs -f"
 alias dcd="docker compose down"
-alias dcr="docker compose restart"
+alias dcr="docker compose run"
 alias dcl="docker compose logs -f"
 
-alias awslogin="aws sso login --profile marketing"
-alias omdc="bin/onemedical"
-alias tfdev="terraform workspace select development"
-alias tfstaging="terraform workspace select staging"
-alias tfprod="terraform workspace select production"
