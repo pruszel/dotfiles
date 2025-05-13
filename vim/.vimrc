@@ -53,26 +53,26 @@ set background=dark
 syntax on
 
 " Theme
-colorscheme molokai
+"colorscheme molokai
 
 " Editor config
-set relativenumber " Use relative line numbers. Current line is still in status bar.
-au BufReadPost,BufNewFile * set relativenumber
+"set relativenumber " Use relative line numbers. Current line is still in status bar.
+"au BufReadPost,BufNewFile * set relativenumber
 set autoindent " Copy indent from last line when starting new line.
 set backspace=indent,eol,start
+set clipboard=unnamed " use system clipboard for copy and paste.
 set cursorline " Highlight current line
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
-set esckeys " Allow cursor keys in insert mode.
 set expandtab " Expand tabs to spaces
-set foldcolumn=4 " Column to show folds
-set foldenable
-set foldlevel=2
+"set foldcolumn=4 " Column to show folds
+"set foldenable
+"set foldlevel=2
 " set foldlevelstart=2 " Sets `foldlevel` when editing a new buffer
-set foldmethod=syntax " Markers are used to specify folds.
-set foldminlines=0 " Allow folding single lines
-set foldnestmax=3 " Set max fold nesting level
+"set foldmethod=syntax " Markers are used to specify folds.
+"set foldminlines=0 " Allow folding single lines
+"set foldnestmax=3 " Set max fold nesting level
 set formatoptions=
 set formatoptions+=c " Format comments
 set formatoptions+=r " Continue comments by default
