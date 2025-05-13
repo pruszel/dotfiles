@@ -31,7 +31,7 @@ autoload -Uz add-zsh-hook
 add-zsh-hook precmd custom_precmd
 
 # Customize prompt format
-PS1="%F{magenta}%n%F{white}:%F{cyan}%1~%f"$'\n'
+PS1="%F{magenta}%n%F{white}:%F{cyan}%~%f"$'\n'
 
 # cd into directory just by typing its name
 setopt autocd
@@ -64,6 +64,14 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Edit line in EDITOR with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+
+# Load Oh My Zsh plugins
+plugins=(
+  git
+  zsh-syntax-highlighting
+  ssh-agent
+  zsh-autosuggestions
+)
 
 # Load `z` command used to jump around directories
 [ -f /opt/homebrew/etc/profile.d/z.sh ] && source /opt/homebrew/etc/profile.d/z.sh
