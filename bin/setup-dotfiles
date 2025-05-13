@@ -1,0 +1,86 @@
+#!/usr/bin/env zsh
+
+# Setup symlinks for dotfiles
+#
+# USAGE
+#	$ setup-dotfiles /path/to/dotfiles
+
+# Validate arguments
+DOTFILES="$1"
+[ -z "$DOTFILES" ] && echo -e "Error: Missing argument\nUsage:\n\t$ setup-dotfiles /path/to/dotfiles" && exit 1
+[ ! -d "$DOTFILES" ] && echo "Error: dotfiles directory \"$DOTFILES\" does not exist." && exit 1
+
+setup_symlink() {
+    SRC=$1;
+    DEST=$2;
+
+    # Check if source file exists
+    if [ ! -e "$SRC" ]; then
+        echo "Source dotfile $SRC does not exist. Skipping."
+        return
+    fi
+
+    # Create directory for DEST if they do not exist
+    if [ ! -d "$(dirname "$DEST")" ]; then
+        mkdir -p "$(dirname "$DEST")"
+    fi
+
+    # Remove broken symlink
+    if [ -L "$DEST" ] && [ ! -e "$DEST" ]; then
+        echo "Broken symlink found at $DEST. Removing it and setting up a new symlink."
+        rm "$DEST"
+    fi
+
+    # Rename existing file with .bak then set up the symlink
+    if [ -e "$DEST" ] && [ ! -L "$DEST" ]; then
+        echo "File already exists at $DEST. Renaming to $DEST.bak then setting up symlink."
+        mv -v "$DEST" "$DEST.bak"
+    fi
+
+    # Create symlink if it does not exist or if it points to a different source
+    if [ ! -e "$DEST" ] || [ "$(readlink -- "$DEST")" != "$SRC" ]; then
+        ln -fs "$SRC" "$DEST" && echo "Symlink created for $DEST."
+    fi
+}
+
+main() {
+    # ssh
+    setup_symlink "$DOTFILES/ssh/config" "$HOME/.ssh/config"
+
+    # zsh
+    setup_symlink "$DOTFILES/zsh/.zshenv" "$HOME/.zshenv"
+    setup_symlink "$DOTFILES/zsh/.zprofile" "$HOME/.zprofile"
+    setup_symlink "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
+    setup_symlink "$DOTFILES/zsh/.zsh_aliases" "$HOME/.zsh_aliases"
+
+    # vim
+    setup_symlink "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
+
+    # neovim
+    setup_symlink "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+
+    # MacVim
+    setup_symlink "$DOTFILES/vim/.gvimrc" "$HOME/.gvimrc"
+
+    # Homebrew
+    setup_symlink "$DOTFILES/Brewfile" "$HOME/Brewfile"
+
+    # Sublime Text
+    setup_symlink "$DOTFILES/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
+    setup_symlink "$DOTFILES/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
+
+    # ranger
+    setup_symlink "$DOTFILES/ranger/rc.conf" "$HOME/.config/ranger/rc.conf"
+
+    # tmux
+    setup_symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+
+    # git
+    cp -n "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
+    setup_symlink "$DOTFILES/git/.gitignore_global" "$HOME/.config/git/gitignore_global"
+
+    # keyboard config
+    setup_symlink "$DOTFILES/.inputrc" "$HOME/.inputrc"
+}
+
+main
