@@ -1,28 +1,21 @@
-# Copy this template to ~/.gitconfig then complete the TODOs as needed.
 [user]
 	name = Peter Ruszel
 	email = 3279147+peterlopez@users.noreply.github.com
-    # TODO: add signingkey
-    # signingkey = 
+	signingkey = ~/.ssh/id_rsa.pub
 [gpg]
 	format = ssh
-# TODO: add ssh signing program path
-# [gpg "ssh"]
-	# program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
 	ignorecase = false
-    autocrlf = input
-    # TODO: copy or symlink the .gitignore_global file to home directory
-    # excludesfile = /Users/peter/.gitignore_global
+	autocrlf = input
+	excludesfile = ~/.config/git/gitignore_global
 [commit]
-    # TODO: enable commit signing once configuration added
-	# gpgsign = true
+	gpgsign = true
 [init]
 	defaultBranch = main
 [pull]
 	ff = only
 [push]
-    autoSetupRemote = true
+	autoSetupRemote = true
 [alias]
 	a  = add
 	b  = branch
