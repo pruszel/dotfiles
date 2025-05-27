@@ -1,6 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-
 brew "aws-shell"
 brew "awscli"
 brew "duti"
@@ -30,8 +27,7 @@ brew "ranger"
 brew "rbenv"
 brew "redis"
 brew "ripgrep"
-brew "terraform"
-brew "tldr"
+brew "tlrc" # tldr
 brew "tmux"
 brew "tmuxinator"
 brew "trash"
@@ -43,6 +39,8 @@ brew "yarn"
 brew "z"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
 
 # Optional
 # brew "1password-cli"
