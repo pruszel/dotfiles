@@ -1,3 +1,7 @@
+Host terminal.shop
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/terminal.shop
 Host *
     AddKeysToAgent yes
     UseKeychain yes
