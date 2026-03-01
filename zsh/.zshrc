@@ -1,10 +1,10 @@
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 # Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-
 # This file is sourced by interactive shells (both login and non-login).
 # It is typically used to set up shell prompts, aliases, functions, and other interactive features.
 
-export EDITOR='neovim'
+export EDITOR='nvim'
 export KEYTIMEOUT=1
 export GPG_TTY="$(tty)"
 
@@ -13,6 +13,9 @@ export GPG_TTY="$(tty)"
 
 # List directory after changing the current working directory
 chpwd() {
+  echo "current working directory:"
+  pwd
+  echo "contents:"
   ls -GAhp1
 }
 
@@ -77,4 +80,11 @@ plugins=(
 [ -f /opt/homebrew/etc/profile.d/z.sh ] && source /opt/homebrew/etc/profile.d/z.sh
 
 # Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/peter/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
