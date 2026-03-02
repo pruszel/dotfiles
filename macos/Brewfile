@@ -29,8 +29,6 @@ brew "redis"
 brew "ripgrep"
 brew "opentofu"
 brew "tealdeer"
-brew "tmux"
-brew "tmuxinator"
 brew "trash"
 brew "tree"
 # Share your terminal over the web
@@ -40,8 +38,6 @@ brew "yarn"
 brew "z"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-tap "hashicorp/tap"
-brew "hashicorp/tap/terraform"
 
 # Optional
 # brew "1password-cli"
