@@ -1,8 +1,5 @@
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
-# Q pre block. Keep at the top of this file.
-# This file is sourced by interactive shells (both login and non-login).
-# It is typically used to set up shell prompts, aliases, functions, and other interactive features.
 
 export EDITOR='nvim'
 export KEYTIMEOUT=1
@@ -11,30 +8,32 @@ export GPG_TTY="$(tty)"
 # Load aliases if present
 [ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
 
+# [this customization has been disabled due to issues with agents]
 # List directory after changing the current working directory
-chpwd() {
-  echo "current working directory:"
-  pwd
-  echo "contents:"
-  ls -GAhp1
-}
+# chpwd() {
+#   echo "current working directory:"
+#   pwd
+#   echo "contents:"
+#   ls -GAhp1
+# }
 
+# [this customization has been disabled due to issues with agents]
 # Print emoji based on previous command's exit code
-custom_precmd() {
-  local exit_status=$?
-  if [[ $exit_status -ne 0 ]]; then
-    echo '❌'
-  else
-    echo '✅'
-  fi
-}
-
+# custom_precmd() {
+#   local exit_status=$?
+#   if [[ $exit_status -ne 0 ]]; then
+#     echo '❌'
+#   else
+#     echo '✅'
+#   fi
+# }
 # Enable zsh hooks
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd custom_precmd
+# autoload -Uz add-zsh-hook
+# add-zsh-hook precmd custom_precmd
 
 # Customize prompt format
-PS1="%F{magenta}%n%F{white}:%F{cyan}%~%f"$'\n'
+# PS1="%F{magenta}%n%F{white}:%F{cyan}%~%f"$'\n'
+PROMPT='%F{cyan}%3~%f %# '
 
 # cd into directory just by typing its name
 setopt autocd
@@ -79,12 +78,8 @@ plugins=(
 # Load `z` command used to jump around directories
 [ -f /opt/homebrew/etc/profile.d/z.sh ] && source /opt/homebrew/etc/profile.d/z.sh
 
-# Q post block. Keep at the bottom of this file.
+# Load machine-specific config if present
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/peter/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
