@@ -38,6 +38,9 @@ alias shop="shopify"
 alias tfapply="tf apply -no-color | tee -a ./terraform-apply.log"
 alias diff='command -v colordiff >/dev/null 2>&1 && colordiff || diff'
 alias brew-save="brew bundle dump --file=~/Developer/dotfiles/brew/Brewfile"
+fly-start() {
+  fly machine start $(fly machine list -a "$1" -q | head -n 1) -a "$1"
+}
 
 # Docker shortcuts
 alias dc="docker compose"
