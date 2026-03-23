@@ -12,7 +12,11 @@ alias la="ls -AhFG"
 alias o="open"
 alias r="ranger"
 alias v="nvim"
-alias cb="pbcopy"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias cb="pbcopy"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias cb="xclip -selection clipboard"
+fi
 alias cp="cp -v"
 alias mv="mv -v"
 alias move="mv -v"
@@ -31,7 +35,9 @@ alias python="python3"
 alias pip="pip3"
 alias tf="terraform"
 alias mux="tmuxinator"
-alias caff="caffeinate"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias caff="caffeinate"
+fi
 alias shop="shopify"
 
 # Complex commands

@@ -11,10 +11,16 @@ export HOMEBREW_NO_ANALYTICS=1
 export PATH="$HOME/bin:$PATH"
 
 # Add Sublime Text subl script to PATH
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+if [[ -d "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ]]; then
+  export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+fi
 
 # Add Homebrew-installed executables to PATH
 export PATH="$PATH:/usr/local/bin"
 
 # Add JetBrains Toolbox App scripts to PATH
-export PATH="$PATH:/Users/pruszel/Library/Application Support/JetBrains/Toolbox/scripts"
+if [[ -d "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" ]]; then
+  export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+elif [[ -d "$HOME/.local/share/JetBrains/Toolbox/scripts" ]]; then
+  export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+fi
