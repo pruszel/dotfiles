@@ -1,6 +1,6 @@
 [user]
 	name = Peter Ruszel
-	email = 3279147+peterlopez@users.noreply.github.com
+	email = 3279147+pruszel@users.noreply.github.com
 	signingkey = ~/.ssh/id_rsa.pub
 [gpg]
 	format = ssh
