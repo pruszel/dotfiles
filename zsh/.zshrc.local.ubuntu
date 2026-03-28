@@ -1,0 +1,2 @@
+# Load `z` command used to jump around directories
+[ -f /usr/share/z/z.sh ] && source /usr/share/z/z.sh
