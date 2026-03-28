@@ -6,10 +6,16 @@ alias ...="cd ../; cd../;"
 alias g="git"
 alias lg="lazygit"
 alias h="cd ~"
-alias l="ls -lLAhFG"
-alias ll="ls -lLAhFG"
-alias la="ls -AhFG"
-alias o="open"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias l="ls -lLAhFG"
+  alias ll="ls -lLAhFG"
+  alias la="ls -AhFG"
+  alias o="open"
+else
+  alias l="ls -lLAhF --color=auto"
+  alias ll="ls -lLAhF --color=auto"
+  alias la="ls -AhF --color=auto"
+fi
 alias r="ranger"
 alias v="nvim"
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -24,10 +30,12 @@ alias mkdir="mkdir -pv"
 
 # Common directories
 alias dev="cd ~/Developer"
-alias docs="cd ~/Documents"
-alias desk="cd ~/Desktop"
-alias pics="cd ~/Pictures"
-alias apps="cd ~/Applications"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias docs="cd ~/Documents"
+  alias desk="cd ~/Desktop"
+  alias pics="cd ~/Pictures"
+  alias apps="cd ~/Applications"
+fi
 
 
 # Shortened commands
