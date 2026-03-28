@@ -1,6 +1,3 @@
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
-
 export EDITOR='nvim'
 export KEYTIMEOUT=1
 export GPG_TTY="$(tty)"
@@ -75,11 +72,5 @@ plugins=(
   zsh-autosuggestions
 )
 
-# Load `z` command used to jump around directories
-[ -f /opt/homebrew/etc/profile.d/z.sh ] && source /opt/homebrew/etc/profile.d/z.sh
-
 # Load machine-specific config if present
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
-
-# Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
