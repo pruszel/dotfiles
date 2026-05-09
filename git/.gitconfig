@@ -49,6 +49,7 @@
 	remotes  = remote -v
 	branches = branch -v
 	stashes  = stash list
+	worktrees = worktree list
 
 	zip = archive --format=zip -o latest.zip HEAD
 	subup = submodule update
