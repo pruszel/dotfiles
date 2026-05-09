@@ -1,9 +1,11 @@
 export EDITOR='nvim'
 export KEYTIMEOUT=1
 export GPG_TTY="$(tty)"
+export COLORTERM=truecolor
 
 # Load aliases if present
 [ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
+[ -f "$HOME/.zsh_aliases_local" ] && source "$HOME/.zsh_aliases_local"
 
 # [this customization has been disabled due to issues with agents]
 # List directory after changing the current working directory
