@@ -2,7 +2,7 @@
 // and are overridden in turn by syntax-specific settings.
 {
     "font_face": "FiraCode-Retina, Menlo, Monaco, Courier New, monospace",
-    "font_size": 18,
+    "font_size": 17,
 
     "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
     "theme": "Adaptive.sublime-theme",
