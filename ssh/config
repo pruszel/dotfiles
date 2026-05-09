@@ -1,3 +1,5 @@
+IgnoreUnknown UseKeychain
+
 Host terminal.shop
     AddKeysToAgent yes
     UseKeychain yes
