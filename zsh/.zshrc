@@ -47,10 +47,14 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 
 # Enable command completion
-autoload compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 _comp_options+=(globdots)
 
 # Use vi mode to edit command line
