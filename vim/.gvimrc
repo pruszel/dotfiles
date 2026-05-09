@@ -1,10 +1,14 @@
 " This file is used to configure vim in GUI-based applications like MacVim.
 
+colorscheme default
+
 set background=auto
 set showtabline=0
+set wrap
+set linebreak
 
 " Font settings
-set guifont=Fira\ Code:h15
+set guifont=SF\ Mono:h16
 set macligatures
 
 " Set the default window size
