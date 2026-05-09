@@ -31,19 +31,27 @@ setup_symlink() {
         rm "$DEST"
     fi
 
+    # Replace existing symlink that points elsewhere
+    if [ -L "$DEST" ] && [ "$(readlink -- "$DEST")" != "$SRC" ]; then
+        echo "Symlink at $DEST points elsewhere. Replacing."
+        rm "$DEST"
+    fi
+
     # Rename existing file with .bak then set up the symlink
     if [ -e "$DEST" ] && [ ! -L "$DEST" ]; then
         echo "File already exists at $DEST. Renaming to $DEST.bak then setting up symlink."
         mv -v "$DEST" "$DEST.bak"
     fi
 
-    # Create symlink if it does not exist or if it points to a different source
-    if [ ! -e "$DEST" ] || [ "$(readlink -- "$DEST")" != "$SRC" ]; then
+    # Create symlink if it does not exist
+    if [ ! -e "$DEST" ]; then
         ln -fs "$SRC" "$DEST" && echo "Symlink created for $DEST."
     fi
 }
 
 main() {
+    # Cross-platform
+
     # ssh
     setup_symlink "$DOTFILES/ssh/config" "$HOME/.ssh/config"
 
@@ -57,30 +65,41 @@ main() {
     setup_symlink "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
 
     # neovim
-    setup_symlink "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
-
-    # MacVim
-    setup_symlink "$DOTFILES/vim/.gvimrc" "$HOME/.gvimrc"
-
-    # Homebrew
-    setup_symlink "$DOTFILES/Brewfile" "$HOME/Brewfile"
-
-    # Sublime Text
-    setup_symlink "$DOTFILES/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
-    setup_symlink "$DOTFILES/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
+    setup_symlink "$DOTFILES/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
     # ranger
-    setup_symlink "$DOTFILES/ranger/rc.conf" "$HOME/.config/ranger/rc.conf"
+    setup_symlink "$DOTFILES/ranger/.config/ranger/rc.conf" "$HOME/.config/ranger/rc.conf"
 
     # tmux
     setup_symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
     # git
-    cp -n "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
+    # NOTE: .gitconfig is copied (not symlinked) because per-machine identity
+    # (user.email, signing keys) differs between work and personal envs.
+    [ ! -e "$HOME/.gitconfig" ] && cp "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
     setup_symlink "$DOTFILES/git/.gitignore_global" "$HOME/.config/git/gitignore_global"
 
-    # keyboard config
+    # readline
     setup_symlink "$DOTFILES/.inputrc" "$HOME/.inputrc"
+
+    # Platform-specific
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # Homebrew
+        setup_symlink "$DOTFILES/macos/Brewfile" "$HOME/Brewfile"
+
+        # MacVim
+        setup_symlink "$DOTFILES/vim/.gvimrc" "$HOME/.gvimrc"
+
+        # Sublime Text
+        setup_symlink "$DOTFILES/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
+        setup_symlink "$DOTFILES/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
+
+        # macOS-specific zshrc local
+        setup_symlink "$DOTFILES/zsh/.zshrc.local.macos" "$HOME/.zshrc.local"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # Linux-specific zshrc local
+        setup_symlink "$DOTFILES/zsh/.zshrc.local.ubuntu" "$HOME/.zshrc.local"
+    fi
 }
 
 main
