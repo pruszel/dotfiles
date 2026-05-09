@@ -1,3 +1,3 @@
 source ~/.vimrc
 
-vim.opt.clipboard = "unnamedplus"
+set clipboard+=unnamedplus
