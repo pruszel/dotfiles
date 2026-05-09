@@ -1,3 +1,4 @@
+" set colorscheme shine
 " Enable useful vim features
 set nocompatible
 
