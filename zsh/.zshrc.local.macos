@@ -4,6 +4,11 @@
 # Load `z` command used to jump around directories
 [ -f /opt/homebrew/etc/profile.d/z.sh ] && source /opt/homebrew/etc/profile.d/z.sh
 
+# Windsurf
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
+
+export DEV_BUILD=true
+
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
 
