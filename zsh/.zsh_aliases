@@ -45,6 +45,7 @@ alias tf="terraform"
 alias mux="tmuxinator"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias caff="caffeinate"
+  alias caffto5='(caffeinate -u -t $(( $(date -j -v17H -v0M -v0S +%s) - $(date +%s) )) &>/dev/null &)'
 fi
 alias shop="shopify"
 
