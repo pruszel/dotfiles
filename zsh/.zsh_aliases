@@ -1,6 +1,7 @@
 # This file is sourced by .zshrc
 
 # Most used commands
+alias reload="source ~/.zshrc"
 alias ..="cd ../"
 alias ...="cd ../; cd../;"
 alias g="git"
