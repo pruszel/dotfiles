@@ -3,7 +3,7 @@
 colorscheme default
 
 set background=auto
-set showtabline=0
+set showtabline=2
 set wrap
 set linebreak
 
