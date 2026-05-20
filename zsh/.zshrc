@@ -78,5 +78,9 @@ plugins=(
   zsh-autosuggestions
 )
 
-# Load machine-specific config if present
+# Load platform-shared config if present (symlinked from dotfiles)
+[ -f "$HOME/.zshrc.local.macos" ] && source "$HOME/.zshrc.local.macos"
+[ -f "$HOME/.zshrc.local.ubuntu" ] && source "$HOME/.zshrc.local.ubuntu"
+
+# Load truly-local secrets if present (never tracked)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"

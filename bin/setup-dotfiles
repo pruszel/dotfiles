@@ -95,10 +95,10 @@ main() {
         setup_symlink "$DOTFILES/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
 
         # macOS-specific zshrc local
-        setup_symlink "$DOTFILES/zsh/.zshrc.local.macos" "$HOME/.zshrc.local"
+        setup_symlink "$DOTFILES/zsh/.zshrc.local.macos" "$HOME/.zshrc.local.macos"
     elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Linux-specific zshrc local
-        setup_symlink "$DOTFILES/zsh/.zshrc.local.ubuntu" "$HOME/.zshrc.local"
+        setup_symlink "$DOTFILES/zsh/.zshrc.local.ubuntu" "$HOME/.zshrc.local.ubuntu"
     fi
 }
 
