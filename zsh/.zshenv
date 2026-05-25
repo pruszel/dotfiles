@@ -26,5 +26,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH:/usr/local/bin"
 fi
 
+# Docker Desktop completions
+if [[ -d "$HOME/.docker/completions" && ":$FPATH:" != *":$HOME/.docker/completions:"* ]]; then
+  fpath=("$HOME/.docker/completions" "${fpath[@]}")
+fi
+
 # Load machine-specific env if present
 [ -f "$HOME/.zshenv.local" ] && source "$HOME/.zshenv.local"
