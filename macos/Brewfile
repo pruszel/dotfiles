@@ -1,5 +1,6 @@
 brew "aws-shell"
 brew "awscli"
+brew "btop"
 brew "duti"
 brew "unbound"
 brew "gnutls"
