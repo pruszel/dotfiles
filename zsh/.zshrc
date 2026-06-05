@@ -1,3 +1,7 @@
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 export EDITOR='nvim'
 export KEYTIMEOUT=1
 export GPG_TTY="$(tty)"
@@ -84,3 +88,7 @@ plugins=(
 
 # Load truly-local secrets if present (never tracked)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
